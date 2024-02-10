@@ -10,7 +10,17 @@
     margin: 0;
     padding: 0;
   }
+
+  .loading {
+    text-align: center;
+    color: white;
+  }
   
+  .error {
+    text-align: center;
+    color: red;
+  }
+
   @keyframes mangas-appear {
     from {
       opacity: 0;

@@ -1,6 +1,7 @@
 import classes from "./AvailableMangas.module.css";
 import Card from "../UI/Card";
 import MangaItem from "./MangaItem";
+import { useEffect, useState } from "react";
 
 const DUMMY_MANGAS = [
   {
@@ -30,13 +31,67 @@ const DUMMY_MANGAS = [
 ];
 
 const AvailableMangas = () => {
-  const mangasList = DUMMY_MANGAS.map((manga) => (
+  const [mangas, setMangas] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [hasError, setHasError] = useState();
+
+  useEffect(() => {
+    const fetchMangas = async () => {
+      const response = await fetch(
+        "https://custom-hook-ea362-default-rtdb.firebaseio.com/mangas.json"
+      );
+
+      if (!response.ok) {
+        throw new Error(
+          "Something went wrong. Please try refreshing the page."
+        );
+      }
+
+      const data = await response.json();
+
+      const loadedMangas = [];
+
+      for (const key in data) {
+        loadedMangas.push({
+          id: key,
+          name: data[key].name,
+          description: data[key].description,
+          price: data[key].price,
+        });
+      }
+
+      setMangas(loadedMangas);
+      setLoading(false);
+    };
+    fetchMangas().catch((err) => {
+      setLoading(false);
+      setHasError(err.message);
+    });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section>
+        <p className={classes.loading}>Loading...</p>
+      </section>
+    );
+  }
+
+  if (hasError) {
+    return (
+      <section>
+        <p className={classes.error}>{hasError}</p>
+      </section>
+    );
+  }
+
+  const mangasList = mangas.map((manga) => (
     <MangaItem
       id={manga.id}
       key={manga.id}
       name={manga.name}
       description={manga.description}
-      price={manga.price}
+      price={+manga.price}
     />
   ));
 
