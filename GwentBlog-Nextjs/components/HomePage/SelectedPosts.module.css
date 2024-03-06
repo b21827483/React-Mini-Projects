@@ -1,0 +1,12 @@
+.div {
+    background-color: #cb7f40;
+    width: 100% ;
+}
+
+.div h1 {
+    padding: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: "gwentregular";
+    color: black;
+}

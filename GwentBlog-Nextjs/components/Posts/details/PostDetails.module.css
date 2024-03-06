@@ -1,0 +1,38 @@
+.post {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc6c6;
+}
+
+.content {
+    width: 95%;
+    max-width: 35rem;
+    margin: 2rem auto;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    border-radius: 6px;
+}
+
+.content p {
+    padding: 1rem 0;
+    color: #838383;
+}
+
+.content ul {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.content .image {
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding: 2rem;
+    }
+}

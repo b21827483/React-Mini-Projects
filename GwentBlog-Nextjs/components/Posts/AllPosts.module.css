@@ -1,0 +1,11 @@
+.allposts {
+    margin: 2rem auto;
+    width: 100% ;
+}
+
+.allposts h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 40px;
+    font-family: gwentregular;
+}

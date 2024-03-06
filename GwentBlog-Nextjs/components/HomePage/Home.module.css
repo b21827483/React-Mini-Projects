@@ -1,0 +1,36 @@
+.home {
+    display: block;
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(to bottom, #243e94, #091b4f);
+}
+
+.img {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 10px 5px 5px rgba(44, 44, 44, 0.78);
+    border-radius: 50%;
+    margin: auto;
+}
+
+.img img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.home h1 {
+    font-weight: bold;
+    margin: 16px auto;
+    font-size: 40px;
+    color: white;
+}
+
+.home p {
+    width: 80%;
+    margin: 0 auto;
+    color: #c9b9b9;
+    max-width: 800px;
+}

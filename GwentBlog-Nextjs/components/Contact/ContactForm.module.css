@@ -1,0 +1,61 @@
+.section {
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 60% ;
+    background-color: #666666;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.section h1 {
+    font-family: gwentregular;
+    text-align: center;
+    font-size: 32px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.inputarea {
+    padding: 1rem;
+    justify-content: center;
+}
+
+.inputarea input,
+.inputarea textarea {
+    padding: 0.25rem;
+    width: 100% ;
+    border: 0.25rem solid black;
+    border-radius: 5px;
+    resize: none;
+}
+
+.inputarea label {
+    display: block;
+    font-size: 20px;
+    padding: 0.5rem 0;
+}
+
+.buttonCont {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form button {
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: #c9b9b9;
+}
+
+.form button:hover {
+    background-color: #ece6e6;
+}
+
+
+
